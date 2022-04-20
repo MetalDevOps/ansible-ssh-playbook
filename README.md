@@ -116,7 +116,5 @@ dev@ip-172-31-0-138:~$
 ```
 
 ## Observações
-1. Por favor, certifique-se de adicionar IPs ou DNS dos servidores de destino no arquivo hosts.
-2. Atualize o arquivo hosts com os IPs dos servidores de destino.
-3. Crie no diretório "keys" um diretório com o mesmo nome do "user_name" e coloque sua chave pública SSH nele.
-4. Configure um usuário que possa ter acesso SSH sem senha (no meu caso - ubuntu) para os servidores de destino.
+1. Crie no diretório "keys" um diretório com o mesmo nome do "user_name" e coloque sua chave pública SSH nele.
+2. Configure um usuário que possa ter acesso SSH sem senha (no meu caso - ninja) para os servidores de destino.
