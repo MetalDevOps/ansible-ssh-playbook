@@ -1,0 +1,9 @@
+--- #ssh-access main yaml
+  - name: SSH
+    hosts: tag_name_ninja
+    vars_files:
+      - roles/ssh-access/tasks/vars.yml
+    gather_facts: False
+    become: true
+    roles:
+      - ssh-access

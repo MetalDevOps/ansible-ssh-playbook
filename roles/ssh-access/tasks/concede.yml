@@ -1,0 +1,16 @@
+--- #Tarefas para adicionar um novo usuário e conceder acesso ssh ao usuário
+- name: Adciona novo usuário
+  user:
+    name: "{{ user_name }}"
+    comment: "{{ user_des }}"
+    shell: /bin/bash
+  tags:
+    - add
+
+- name: Concede acesso SSH ao usuário
+  authorized_key:
+    user: "{{ user_name }}"
+    state: present
+    key: "{{ lookup('file', '../../../keys/{{ user_name }}/id_rsa.pub') }}"
+  tags:
+    - grant

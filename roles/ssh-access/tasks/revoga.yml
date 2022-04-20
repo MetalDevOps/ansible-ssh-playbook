@@ -1,0 +1,16 @@
+--- #tarefas para remover o usuário e revogar o acesso ssh do usuário
+- name: Revoga acesso SSH do usuário
+  authorized_key:
+    user: "{{ user_name }}"
+    state: absent
+    key: "{{ lookup('file', '../../../keys/{{ user_name }}/id_rsa.pub') }}"
+  tags:
+    - revoke
+
+- name: Remove o usuário
+  user:
+    name: "{{ user_name }}"
+    state: absent
+    remove: yes
+  tags:
+    - remove

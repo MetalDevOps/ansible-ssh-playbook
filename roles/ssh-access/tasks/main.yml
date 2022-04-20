@@ -1,0 +1,8 @@
+--- #principal yaml para executar as tarefas
+- name: Adciona tarefa de usuário
+  import_tasks: concede.yml
+  when: action == "concede"
+
+- name: Remove tarefa de usuário
+  import_tasks: revoga.yml
+  when: action == "revoga"
